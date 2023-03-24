@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coffee Home Page</title>
+	<link rel="icon" href="tcs.png">
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div class="container">
+<button onclick="logOff()" id="logout" class="glyphicon glyphicon-log-out btn btn-primary">Logout</button>
+	<center>
+		<h1 class="header">	
+			Coffee Chat
+			<sup>
+				<img src="chat.png">
+			</sup>
+		</h1>
+		<h3 id ="userName" class="color_white"></h3>
+		<div class="form-group input_div_room_page">
+			<label>Enter Room Name:</label>
+<input id="RoomName" class="form-control">
+		</div>
+		<button onclick ="addRoom()" class="btn btn-success">Add Room</button>
+		<h3 class="color_white">TRENDING ROOMS</h3>
+	<div id="container"> <h1 class="color_white">#1 Trending Room: Spms <br> #2 Trending Room: Coffee <br> #3 Trending Room: Homework Hangout <br> <br><h1 class="color_black"></h1><button onclick="myFunction()" class="" > COPY EMOTES </button></h1></div>
+	😀<input id="content" disabled>😀</input>
+	<button onclick="copyToClipboard()">Copy</button>
+	
+	<script>
+	  function copyToClipboard() {
+		var copyText = "😀";
+		navigator.clipboard.writeText(copyText).then(() => {
+			// Alert the user that the action took place.
+			// Nobody likes hidden stuff being done under the hood!
+			alert("Copied to clipboard");
+		});
+	  }
+	</script>
+	<br>
+	🤢<input id="content" disabled>🤢 </input>
+<button onclick="copyToClipboard2()">Copy</button>
+
+<script>
+  function copyToClipboard2() {
+	var copyText = "🤢 ";
+	navigator.clipboard.writeText(copyText).then(() => {
+		// Alert the user that the action took place.
+		// Nobody likes hidden stuff being done under the hood!
+		alert("Copied to clipboard");
+	});
+  }
+</script>
+ <br>
+ 🙁<input id="content" disabled>🙁 </input>
+<button onclick="copyToClipboard3()">Copy</button>
+<script>
+	function copyToClipboard3() {
+	  var copyText = "🙁 ";
+	  navigator.clipboard.writeText(copyText).then(() => {
+		  // Alert the user that the action took place.
+		  // Nobody likes hidden stuff being done under the hood!
+		  alert("Copied to clipboard");
+	  });
+	}
+  </script>
+</center>
+</div>
+<script src="kwitter_room.js"></script>
+</body>
+</html>
