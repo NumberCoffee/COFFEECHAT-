@@ -46,7 +46,6 @@ function getData() {
 console.log(firebase_message_id );
 console.log(message_data);
 name1 = message_data["name"];
-image1 = message_data["image"];
 message = message_data["message"];
 like = message_data["like"];
 name_width_tag = "<h4> " + name1 + "<img class='user_tick' src='tick.png'> </h4>" ;
